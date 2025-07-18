@@ -118,9 +118,8 @@ class Generator(QRunnable):
                 )
                 line_y -= row_height
                 
-                # Add spacer after machine lines (FZ) and before handpack lines (H1)
                 if line == 'FZ':
-                    line_y -= row_height * 0.5  # Add half a row height as spacer
+                    line_y -= row_height * 0.5
 
             canvas.setFont("Helvetica-Bold", 12)
             canvas.drawString(start_x, line_y - 10, f"Total Revenue: ${total_revenue:.2f}")
@@ -180,7 +179,7 @@ class Report(QWidget):
         self.name.setInsertPolicy(QComboBox.InsertPolicy.NoInsert)
         self.name.setMaxVisibleItems(8)  # Show up to 8 items in dropdown
         self.name.lineEdit().setPlaceholderText("Enter your full name") # type: ignore
-        self.name.setFixedWidth(200)  # Set reasonable width for names
+        self.name.setFixedWidth(200)
         
         # Load recent names
         recent_names = self.settings.get('recent_names', [])
@@ -189,7 +188,7 @@ class Report(QWidget):
         
         self.shift = QSpinBox()
         self.shift.setRange(1, 2)
-        self.shift.setFixedWidth(80)  # Set small width for shift (just 1-2)
+        self.shift.setFixedWidth(80)
         self.notes = QTextEdit()
 
         grid = QGridLayout()
@@ -248,11 +247,10 @@ class Report(QWidget):
 
         input_layout = QVBoxLayout()
         
-        # Create horizontal layout for name and shift
         name_shift_layout = QHBoxLayout()
         name_shift_layout.addWidget(QLabel("Name"))
         name_shift_layout.addWidget(self.name)
-        name_shift_layout.addStretch()  # Add stretch to push shift to the right
+        name_shift_layout.addStretch()
         name_shift_layout.addWidget(QLabel("Shift"))
         name_shift_layout.addWidget(self.shift)
         
@@ -296,7 +294,6 @@ class Report(QWidget):
             over = QLineEdit()
             under = QLineEdit()
             
-            # Make price fields read-only
             over.setReadOnly(True)
             under.setReadOnly(True)
             
@@ -324,7 +321,7 @@ class Report(QWidget):
         machine_button_layout.addWidget(edit_threshold_button)
         
         # Add machine button layout to settings
-        machine_layout.addLayout(machine_button_layout, 6, 0, 1, 3)  # Span all columns
+        machine_layout.addLayout(machine_button_layout, 6, 0, 1, 3)
                 
         handpack_layout = QVBoxLayout()        
         self.handpack_container = QVBoxLayout()
@@ -381,7 +378,7 @@ class Report(QWidget):
         price_field = QLineEdit(f"{price:.4f}")
         
         price_field.setFixedWidth(100)
-        price_field.setReadOnly(True)  # Make price field read-only
+        price_field.setReadOnly(True)
         
         layout.addWidget(name_label)
         layout.addStretch()
@@ -400,7 +397,7 @@ class Report(QWidget):
         price_field = QLineEdit(f"{price:.4f}")
         
         price_field.setFixedWidth(100)
-        price_field.setReadOnly(True)  # Make price field read-only
+        price_field.setReadOnly(True)
         
         layout.addWidget(name_label)
         layout.addStretch() 
