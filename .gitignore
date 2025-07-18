@@ -9,3 +9,7 @@ build/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# assets
+logo.jpeg
+settings.json

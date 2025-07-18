@@ -29,9 +29,9 @@ A PyQt6-based desktop application for generating production contribution reports
 - No additional software required (standalone executable)
 
 ### Setup
-1. Download the latest `Production-Report-Generator.exe` from releases
-2. Place the executable in your desired directory
-3. Run the application - it will create a `settings.json` file on first launch
+1. Download the `latest release`
+2. Export the report folder from dist\
+3. Run the application
 
 ## Usage
 
