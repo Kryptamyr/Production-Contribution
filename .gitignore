@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 
 # Build artifacts
-build/
 *.spec
 
 # Settings and local config

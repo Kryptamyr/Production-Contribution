@@ -30,8 +30,8 @@ A PyQt6-based desktop application for generating production contribution reports
 
 ### Setup
 1. Download the `latest release`
-2. Export the report folder from dist\
-3. Run the application
+2. Export folder to desired directory
+3. Run report.exe in dist\report
 
 ## Usage
 
