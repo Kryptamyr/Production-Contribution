@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Build artifacts from PyInstaller
+build/
+dist/
+*.spec
+
+# OS-specific files
+.DS_Store
+Thumbs.db
