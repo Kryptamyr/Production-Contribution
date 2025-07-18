@@ -1,15 +1,15 @@
-# Python cache
+# Bytecode
 __pycache__/
 *.py[cod]
 
-# Build artifacts from PyInstaller
+# Build artifacts
 build/
 *.spec
+
+# Settings and local config
+settings.json
+logo.jpeg
 
 # OS-specific files
 .DS_Store
 Thumbs.db
-
-# assets
-logo.jpeg
-settings.json
